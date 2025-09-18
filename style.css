@@ -1,0 +1,115 @@
+ * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #a01c0d, #070606);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; 
+    }
+
+    .quiz-container {
+      background: linear-gradient(120deg, #a81f1f9f, #972828ac);
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+
+      /* Animation */
+      animation: slideDown 0.7s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #391212;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .options button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #d0caca;
+      transition: 0.3s;
+      width: 100%; 
+      box-sizing: border-box;
+    }
+
+    .options button:hover {
+      background: #e0b5b2;
+    }
+
+    .options button.correct {
+      background: #48b748;
+    }
+
+    .options button.wrong {
+      background: #d27777;
+    }
+
+    #next-btn {
+      padding: 10px 15px;
+      border: none;
+      color: white;
+      background: linear-gradient(#232526, #414345, #a01c0d);
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+      width: 30%; 
+    }
+
+    #next-btn:hover {
+      background: linear-gradient(#892626, #414345);
+      border: 2px solid rgb(87, 3, 3);
+    }
+
+    /* ✅ Responsive */
+    @media (max-width: 480px) {
+      .quiz-container {
+        padding: 15px;
+        max-width: 100%;
+        margin: 10px; 
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      .options button {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      #next-btn {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
