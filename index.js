@@ -60,7 +60,7 @@ function checkAnswer(selected, correct) {
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].disabled = true; // the ans will not change
     if (buttons[i].textContent === correct) {
-      buttons[i].style.background = "lightgreen"; // highlighting correct ans
+      buttons[i].style.background = "linear-gradient(#bdc3c7,#2c3e50)"; // highlighting correct ans
             buttons[i].style.color = "black"; 
 
        buttons[i].innerHTML += ' <i class="fas fa-check"></i>';
